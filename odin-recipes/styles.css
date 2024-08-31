@@ -1,15 +1,14 @@
 body {
+    padding: 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: gray;
 }
 
 h1 {
-    padding: 1em;
     background-color: pink;
     text-align: center;
 }
 
 .recipe-list {
-    padding: 1em 1em 1em 5em;
     background-color: antiquewhite;
 }
