@@ -51,9 +51,11 @@ function updateStatus(result) {
   } else if (result < 0) {
     state.textContent = "You have lost!";
     state.style.color = "var(--red)";
+    aiScore.textContent = +aiScore.textContent + 1;
   } else {
     state.textContent = "You win!";
     state.style.color = "var(--green)";
+    playerScore.textContent = +playerScore.textContent + 1;
   }
 
   // Timer
