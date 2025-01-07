@@ -12,11 +12,12 @@ html {
 
 :root {
     --bg-color: #121212;
+    --bg-2-color: #1E1E1E;
     --fg-color: #E0E0E0;
     --accent-color: #9A5CF1;
-    --green: #4CAF50;
-    --red: #E53935;
-    --bg-2-color: #1E1E1E;
+    --green: #32CD32;
+    --red: #FF4040;
+    --tie: #FFD700;
 }
 
 body {
@@ -24,24 +25,46 @@ body {
     background-color: var(--bg-color);
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    gap: 60px;
 }
 
 h1,h2,h3 {
     margin: 20px;
 }
 
+.game-play {
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.game-state {
+    background-color: var(--bg-2-color);
+    height: 100vh;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#state {
+    display: none;
+    margin: -20px 0 20px;
+}
+
 #choice {
     display: flex;
     gap: 40px;
+    width: 100%;
 }
 
 #choice button {
+    flex: 1 1 300px;
+    height: 50vh;
     border: none;
-    width: 250px;
-    height: 400px;
     border-radius: 15px;
     background-color: var(--bg-2-color);
     color: var(--fg-color);
@@ -58,12 +81,10 @@ h1,h2,h3 {
 
 #scores {
     display: flex;
-    background-color: var(--bg-2-color);
     border-radius: 5px;
 }
 
 #scores div {
-    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;

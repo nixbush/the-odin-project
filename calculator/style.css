@@ -1,0 +1,38 @@
+html {
+   box-sizing: border-box;
+   font-size: 14px;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#calculator {
+   background-color: #3f4d53;
+   width: 350px;
+   height: 500px;
+   border-radius: 15px;
+}
+
+.text-area {
+   height: 30%;
+   background-color: red;
+   border-radius: 15px 15px 0 0;
+}
+
+/* #3F4D53
+#FE6F76
+#EFEFEF
+#D2DDE5
+#3F4D53 */
