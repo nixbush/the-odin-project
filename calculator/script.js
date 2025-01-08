@@ -1,6 +1,7 @@
 /* TODO: For future me
  * - Add the complete operations in the `displayOperation` thing. Currently, all it does is display
  *   the last arithmetic operation
+ * - Add keyboard support
  */
 
 const displayOperation = document.querySelector("#d-operation");
