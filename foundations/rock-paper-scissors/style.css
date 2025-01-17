@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --bg-color: #121212;
+    --bg-2-color: #1E1E1E;
+    --fg-color: #E0E0E0;
+    --accent-color: #9A5CF1;
+    --green: #32CD32;
+    --red: #FF4040;
+    --tie: #FFD700;
+}
+
+body {
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    gap: 60px;
+}
+
+h1,h2,h3 {
+    margin: 20px;
+}
+
+.game-play {
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.game-state {
+    background-color: var(--bg-2-color);
+    height: 100vh;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#state {
+    display: none;
+    margin: -20px 0 20px;
+}
+
+#choice {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+}
+
+#choice button {
+    flex: 1 1 300px;
+    height: 50vh;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--bg-2-color);
+    color: var(--fg-color);
+    font-weight: 700;
+    font-size: 2.5em;
+    transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#choice button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#scores {
+    display: flex;
+    border-radius: 5px;
+}
+
+#scores div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
