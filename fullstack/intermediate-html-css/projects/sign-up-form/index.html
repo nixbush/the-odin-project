@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Sign Up Form</title>
+      <link rel="stylesheet" type="text/css" href="styles.css" />
+   </head>
+
+   <body>
+      <div class="logo-sidebar">
+         <img src="images/logo.svg" alt="Logo Image" />
+         <p>
+            Image by
+            <a
+               href="https://pixabay.com/users/phydc-2218105/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8152089"
+               >José David Castillo Arias
+            </a>
+            from
+            <a
+               href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8152089"
+               >Pixabay
+            </a>
+         </p>
+      </div>
+
+      <div class="form-container">
+         <div class="form-description">
+            <p>
+               It was late, I was rushing, and I promised myself I’d come back
+               to this spot. The idea was crystal clear. But now, as I stare at
+               the screen, it’s all a blur. I swear I had something clever,
+               something important to add here.
+            </p>
+            <p>Maybe tomorrow, or maybe never. Who knows?</p>
+         </div>
+
+         <form class="account-form">
+            <div class="account-details">
+               <h2>Let's do this!</h2>
+
+               <div class="account-details-row">
+                  <div class="account-input">
+                     <label for="first-name">FIRST NAME</label>
+                     <input type="text" name="first-name" id="first-name" />
+                  </div>
+
+                  <div class="account-input">
+                     <label for="last-name">LAST NAME</label>
+                     <input type="text" name="last-name" id="last-name" />
+                  </div>
+               </div>
+
+               <div class="account-details-row">
+                  <div class="account-input">
+                     <label for="email">EMAIL</label>
+                     <input type="email" name="email" id="email" />
+                  </div>
+
+                  <div class="account-input">
+                     <label for="phone-number">PHONE NUMBER</label>
+                     <input type="text" name="phone-number" id="phone-number" />
+                  </div>
+               </div>
+
+               <div class="account-details-row">
+                  <div class="account-input">
+                     <label for="password">PASSWORD</label>
+                     <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        required
+                     />
+                  </div>
+
+                  <div class="account-input">
+                     <label for="confirm-password">CONFIRM PASSWORD</label>
+                     <input
+                        type="password"
+                        name="confirm-password"
+                        id="confirm-password"
+                        required
+                     />
+                  </div>
+               </div>
+            </div>
+
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+         </form>
+      </div>
+   </body>
+</html>

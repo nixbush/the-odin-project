@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+
+      <style>
+         body {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+         }
+
+         .container {
+            background-color: red;
+            padding: 40px;
+         }
+
+         .other-container {
+            background-color: blue;
+         }
+
+         .child-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+            grid-auto-rows: minmax(100px, 1fr);
+         }
+      </style>
+   </head>
+
+   <body>
+      <div class="container">
+         <h1>Parent</h1>
+         <div class="child-container">
+            <h2>Child</h2>
+            <h2>Child</h2>
+            <h2>Child</h2>
+            <h2>Child</h2>
+            <h2>Child</h2>
+            <h2>Child</h2>
+            <h2>Child</h2>
+            <h2>Child</h2>
+         </div>
+      </div>
+
+      <div class="other-container">
+         <h1>Other Parent</h1>
+      </div>
+   </body>
+</html>
