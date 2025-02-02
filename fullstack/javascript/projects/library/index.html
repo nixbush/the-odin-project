@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Personal Library</title>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+      <script src="script.js" defer></script>
+   </head>
+
+   <body>
+      <nav class="library-action">
+         <h1>Personal Library</h1>
+         <div class="library-action-group">
+            <button class="library-action-button" id="library-action-add">
+               <img src="/assets/bookmark_add.svg" alt="" class="icon" />
+               Add Book
+            </button>
+
+            <button class="library-action-button critical-action" id="library-action-remove">
+               <img src="/assets/playlist_remove.svg" alt="" class="icon" />
+               Remove All
+            </button>
+         </div>
+      </nav>
+
+      <main class="book-section">
+         <ul class="book-list"></ul>
+      </main>
+
+      <dialog class="modal-create-book">
+         <h2>Create New Book Entry</h2>
+         <form class="create-book-form">
+            <div class="form-entry">
+               <label for="title">TITLE</label>
+               <input type="text" name="title" id="title" required />
+            </div>
+
+            <div class="form-entry">
+               <label for="author">AUTHOR</label>
+               <input type="text" name="author" id="author" required />
+            </div>
+
+            <div class="form-entry">
+               <label for="year">YEAR</label>
+               <input type="number" name="year" id="year" value="2024" />
+            </div>
+
+            <div class="form-entry">
+               <label for="synopsis">SYNOPSIS</label>
+               <textarea rows="6" id="synopsis"></textarea>
+            </div>
+
+            <div class="form-option">
+               <input type="checkbox" name="read" id="read" />
+               <label for="read"><em>Has read?</em></label>
+            </div>
+
+            <button class="create-book-submit">
+               <img src="/assets/book_ribbon.svg" alt="" class="icon" />
+               Create Book
+            </button>
+         </form>
+      </dialog>
+   </body>
+</html>
