@@ -1,0 +1,49 @@
+body {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.board {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-auto-rows: 1fr;
+   gap: 16px;
+}
+
+.cell {
+   border: 2px solid black;
+   border-radius: 8px;
+   width: 64px;
+   height: 64px;
+   font-size: 2em;
+   transition: all 0.1s ease-in-out;
+}
+
+.cell:hover {
+   background-color: lightgreen;
+   transform: scale(1.1, 1.1);
+}
+
+.X-occupied:hover,
+.X-occupied {
+   background-color: #ff7f7f;
+}
+
+.O-occupied:hover,
+.O-occupied {
+   background-color: lightblue;
+}
+
+.empty {
+   background-color: #d3d3d3;
+   border: 2px solid #d3d3d3;
+}
+
+.empty:hover {
+   background-color: #d3d3d3;
+   border: 2px solid #d3d3d3;
+   transform: none;
+}
