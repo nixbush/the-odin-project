@@ -2,38 +2,39 @@
  * Library Objects and Stuff
  */
 
-function Book(name, author, year, synopsis, read = false) {
-   this.name = name
-   this.author = author
-   this.year = year
-   this.read = read
-   this.synopsis = synopsis
-}
+class Book {
+   constructor(name, author, year, synopsis, read = false) {
+      this.name = name
+      this.author = author
+      this.year = year
+      this.read = read
+      this.synopsis = synopsis
+   }
 
-Book.prototype.createElement = function(id) {
-   const bookElem = document.createElement('li')
-   bookElem.classList.add('book-card')
-   bookElem.dataset.id = id
-   bookElem.dataset.read = this.read
+   createElement(id) {
+      const bookElem = document.createElement('li')
+      bookElem.classList.add('book-card')
+      bookElem.dataset.id = id
+      bookElem.dataset.read = this.read
 
-   const title = document.createElement('h2')
-   title.innerText = this.name
-   bookElem.appendChild(title)
+      const title = document.createElement('h2')
+      title.innerText = this.name
+      bookElem.appendChild(title)
 
-   const authorAndYear = document.createElement('strong')
-   authorAndYear.innerText = `${this.author} (${this.year})`
-   bookElem.appendChild(authorAndYear)
+      const authorAndYear = document.createElement('strong')
+      authorAndYear.innerText = `${this.author} (${this.year})`
+      bookElem.appendChild(authorAndYear)
 
-   const synopsis = document.createElement('div')
-   synopsis.classList.add('book-synopsis')
-   /* NOTE: This is a security risk, but idgaf */
-   synopsis.innerHTML = this.synopsis
-   bookElem.appendChild(synopsis)
+      const synopsis = document.createElement('div')
+      synopsis.classList.add('book-synopsis')
+      /* NOTE: This is a security risk, but idgaf */
+      synopsis.innerHTML = this.synopsis
+      bookElem.appendChild(synopsis)
 
-   const actionGroup = document.createElement('div')
-   actionGroup.classList.add('book-action-group')
-   /* NOTE: Too lazy to make all this, like ain't no way bro */
-   actionGroup.innerHTML = `
+      const actionGroup = document.createElement('div')
+      actionGroup.classList.add('book-action-group')
+      /* NOTE: Too lazy to make all this, like ain't no way bro */
+      actionGroup.innerHTML = `
       <button class="book-action-button" id="book-action-read">
          <img src="/assets/${this.read ? 'menu_book' : 'book_2'}.svg" alt="" class="icon" />
          <p>${this.read ? 'Reading' : 'Closed'}</p>
@@ -42,10 +43,11 @@ Book.prototype.createElement = function(id) {
          <img src="/assets/delete.svg" alt="" class="icon" />
          <p>Delete</p>
       </button>
-   `
+      `
 
-   bookElem.appendChild(actionGroup)
-   return bookElem
+      bookElem.appendChild(actionGroup)
+      return bookElem
+   }
 }
 
 let libraryCollection = {}
@@ -56,7 +58,7 @@ function libraryCollectionAdd(book) {
    libraryCollection[bookID] = book
    const bookElem = book.createElement(bookID)
 
-   bookElem.querySelector('#book-action-read').addEventListener('click', function() {
+   bookElem.querySelector('#book-action-read').addEventListener('click', function () {
       if (bookElem.dataset.read === 'false') {
          this.querySelector('p').innerText = 'Reading'
          this.querySelector('img').src = '/assets/menu_book.svg'
@@ -70,7 +72,7 @@ function libraryCollectionAdd(book) {
       }
    })
 
-   bookElem.querySelector('#book-action-delete').addEventListener('click', function() {
+   bookElem.querySelector('#book-action-delete').addEventListener('click', function () {
       delete libraryCollection[bookID]
       bookList.removeChild(bookElem)
    })
